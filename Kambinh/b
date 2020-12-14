@@ -157,7 +157,7 @@ chmod +x /etc/rc.local
 
 # etc
 wget -O /home/vps/public_html/client.ovpn "https://raw.githubusercontent.com/BangJaguh/moku/main/Kambinh/client.ovpn"
-wget -O /home/vps/public_html/client1.ovpn "https://raw.githubusercontent.com/kingmapualaut/gakod/main/client1.ovpn"
+wget -O /home/vps/public_html/client1.ovpn "https://raw.githubusercontent.com/BangJaguh/moku/main/Kambinh/client1.ovpn"
 wget -O /etc/motd "https://raw.githubusercontent.com/ehomecore/deb-ubun/master/rendum/motd"
 sed -i 's/AcceptEnv/#AcceptEnv/g' /etc/ssh/sshd_config
 sed -i "s/ipserver/$myip/g" /home/vps/public_html/client.ovpn
