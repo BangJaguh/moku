@@ -676,7 +676,7 @@ http-proxy-option CUSTOM-HEADER X-Forwarded-For redirect.googlevideo.com
 <ca>
 $(cat /etc/openvpn/ca.crt)
 $(cat /etc/openvpn/xbarts.crt)
-$(cat /etc/openvpn/xbarts.crt)
+$(cat /etc/openvpn/xbarts.key)
 $(cat /etc/openvpn/ta.key)
 </tls-auth>
 EOF152
@@ -709,7 +709,7 @@ verb 1
 <ca>
 $(cat /etc/openvpn/ca.crt)
 $(cat /etc/openvpn/xbarts.crt)
-$(cat /etc/openvpn/xbarts.crt)
+$(cat /etc/openvpn/xbarts.key)
 $(cat /etc/openvpn/ta.key)
 </tls-auth>
 EOF16
@@ -745,7 +745,7 @@ http-proxy-option CUSTOM-HEADER X-Forwarded-For tweetdeck.twitter.com
 <ca>
 $(cat /etc/openvpn/ca.crt)
 $(cat /etc/openvpn/xbarts.crt)
-$(cat /etc/openvpn/xbarts.crt)
+$(cat /etc/openvpn/xbarts.key)
 $(cat /etc/openvpn/ta.key)
 </tls-auth>
 EOF160
@@ -785,7 +785,7 @@ log /dev/null
 <ca>
 $(cat /etc/openvpn/ca.crt)
 $(cat /etc/openvpn/xbarts.crt)
-$(cat /etc/openvpn/xbarts.crt)
+$(cat /etc/openvpn/xbarts.key)
 $(cat /etc/openvpn/ta.key)
 </tls-auth>
 EOF17
