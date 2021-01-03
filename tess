@@ -229,6 +229,15 @@ echo 'http-proxy-option CUSTOM-HEADER "X-Forwarded-For: viber.com"' >> /var/www/
 echo '<ca>' >> /var/www/html/client.ovpn
 cat /etc/openvpn/ca.crt >> /var/www/html/client.ovpn
 echo '</ca>' >> /var/www/html/client.ovpn
+echo '<cert>' >> /var/www/html/client.ovpn
+cat /etc/openvpn/server.crt >> /var/www/html/client.ovpn
+echo '</cert>' >> /var/www/html/client.ovpn
+echo '<key>' >> /var/www/html/client.ovpn
+cat /etc/openvpn/server.key >> /var/www/html/client.ovpn
+echo '</key>' >> /var/www/html/client.ovpn
+echo '<tls-auth>' >> /var/www/html/client.ovpn
+cat /etc/openvpn/ta.key >> /var/www/html/client.ovpn
+echo '</tls-auth>' >> /var/www/html/client.ovpn
 }
 
 function stunconf () {
