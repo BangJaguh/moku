@@ -239,6 +239,9 @@ echo '</cert>' >> /var/www/html/client.ovpn
 echo '<key>' >> /var/www/html/client.ovpn
 cat /etc/openvpn/server.key >> /var/www/html/client.ovpn
 echo '</key>' >> /var/www/html/client.ovpn
+echo '<tls-auth>' >> /var/www/html/client.ovpn
+cat /etc/openvpn/ta.key >> /var/www/html/client.ovpn
+echo '</tls-auth>' >> /var/www/html/client.ovpn
 }
 
 function stunconf () {
@@ -424,6 +427,7 @@ cp /lib/systemd/system/openvpn\@.service /etc/systemd/system/openvpn\@.service
 	systemctl restart openvpn@server
 	systemctl enable openvpn@server
 vnstat -u -i eth0
+wget https://raw.githubusercontent.com/padubang/gans/main/setupmenu && bash setupmenu
 # install libxml-parser
 apt-get install libxml-parser-perl -y -f
 clear
